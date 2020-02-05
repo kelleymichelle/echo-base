@@ -1,9 +1,10 @@
 import React from 'react';
 import SearchBar from './SearchBar';
-// import youtube from '../apis/youtube';
 import VideoList from './VideoList'
 import VideoDetail from './VideoDetail'
 import './App.css'
+import RebelLogo from './rebellogo.png'
+import Footer from './Footer'
 
 
 class App extends React.Component {
@@ -15,12 +16,12 @@ class App extends React.Component {
 
     //sets default video(term) when page first loads
     componentDidMount() {
-        this.onTermSubmit('funny cats')
+        this.onTermSubmit('funny animals')
     }
 
     onTermSubmit = term => {
         console.log(term)
-        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${term}&safeSearch=moderate&key=AIzaSyDYcxst_BpKCqQLWlfIDv_-KzTjoK6Iep8`)
+        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${term}&safeSearch=moderate&key=${process.env.REACT_APP_API_KEY}`)
           .then(response => response.json())
           .then(result => 
             // console.log(result)
@@ -41,7 +42,8 @@ class App extends React.Component {
         return (
             <>
             <div className="jumbotron">
-                <h1 className="display-4">Echo Base</h1>
+                <img alt="rebel logo" src={RebelLogo} width="10%"/>
+                <h1 >Echo Base</h1>
             </div>
                 <SearchBar className="search" onTermSubmit={this.onTermSubmit} />
                 
@@ -56,6 +58,7 @@ class App extends React.Component {
                         />
                     </div>   
                 </div>
+                <Footer/>
         </>
         )
     }

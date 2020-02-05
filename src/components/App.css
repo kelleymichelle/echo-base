@@ -1,9 +1,18 @@
 
 h1 {
-  border-bottom: solid;
-  border-width: 3px;
+  /* border-bottom: solid;
+  border-width: 3px; */
   text-align: center;
+  margin-left: 80px;
+  font-size: 100px;
+  font-family: 'Sigmar One', cursive;
 }
-/* body {
-  background-image: url('death-star-hoth.jpg')
-} */
+
+.jumbotron {
+  height: 240px;
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
