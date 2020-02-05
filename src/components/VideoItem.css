@@ -8,6 +8,8 @@
 .video-item.item {
     border-style: solid;
     border-width: 2.25px;
+    background-color: navy;
+    opacity: 0.8;
     padding: 7px;
     border-color: darkgreen;
 }
