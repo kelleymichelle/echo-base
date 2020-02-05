@@ -21,7 +21,7 @@ class App extends React.Component {
 
     onTermSubmit = term => {
         console.log(term)
-        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${term}&safeSearch=moderate&key=${process.env.REACT_APP_API_KEY}`)
+        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&maxResults=10&q=${term}&safeSearch=moderate&key=${process.env.REACT_APP_API_KEY}`)
           .then(response => response.json())
           .then(result => 
             // console.log(result)

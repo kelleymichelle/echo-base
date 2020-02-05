@@ -2,16 +2,13 @@
     display: flex !important;
     align-items: center !important;
     cursor: pointer;
-    margin: 5px;
+    margin: 4px;
 }
 
 .video-item.item {
-    border-style: solid;
-    border-width: 2.25px;
     background-color: navy;
-    opacity: 0.8;
-    padding: 7px;
-    border-color: darkgreen;
+    opacity: 0.7;
+    padding: 1px;
 }
 
 .video-item.item img {
@@ -19,5 +16,5 @@
 }
 
 .content {
-    max-width: 150px;
+    max-width: 200px;
 }
