@@ -16,7 +16,7 @@ class App extends React.Component {
 
     //sets default video(term) when page first loads
     componentDidMount() {
-        this.onTermSubmit('funny animals')
+        this.onTermSubmit('cute kittens')
     }
 
     onTermSubmit = term => {
@@ -43,7 +43,7 @@ class App extends React.Component {
             <>
             <div className="jumbotron">
                 <img alt="rebel logo" src={RebelLogo} width="10%"/>
-                <h1 >Echo Base</h1>
+                <h1 >Ekko Base</h1>
             </div>
                 <SearchBar className="search" onTermSubmit={this.onTermSubmit} />
                 
