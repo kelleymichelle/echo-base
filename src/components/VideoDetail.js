@@ -11,7 +11,7 @@ if(!video) {
     return (
         <div>
             <div className="ui embed">
-                <iframe title="videoplayer" src={videoSrc} width="640" height="360"/>
+                <iframe title="videoplayer" src={videoSrc} allow="fullscreen" width="640" height="360"/>
             </div>
             <div className="ui segment video-details">
                 <h4 className="ui header">{video.snippet.title}</h4>
