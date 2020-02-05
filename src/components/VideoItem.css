@@ -1,0 +1,21 @@
+.video-item {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.video-item.item {
+    border-style: solid;
+    border-width: 2.25px;
+    padding: 7px;
+    border-color: darkgreen;
+}
+
+.video-item.item img {
+    max-width: 250px;    
+}
+
+.content {
+    max-width: 150px;
+}
