@@ -25,7 +25,8 @@ class SearchBar extends React.Component {
                 <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
                         <label>These are not the droids I'm looking for... </label>
-                        <input 
+                        <input
+                        style={{minWidth: '300px'}} 
                         type="text" 
                         value={this.state.term} 
                         onChange={this.onInputChange}

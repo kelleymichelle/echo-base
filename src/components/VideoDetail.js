@@ -9,9 +9,9 @@ if(!video) {
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
 
     return (
-        <div>
-            <div className="ui embed">
-                <iframe title="videoplayer" src={videoSrc} allow="fullscreen" width="640" height="360"/>
+        <div class="embed-responsive embed-responsive-21by9" style={{marginLeft: '2em'}}>
+            <div className="ui embed" style={{padding: '5%'}}>
+                <iframe style={{maxWidth: '640px', maxHeight: '360px', margin: '0px'}} class="embed-responsive-item" title="videoplayer" src={videoSrc} gesture="media" allow="encrypted-media" allowfullscreen/>
             </div>
             <div className="ui segment video-details">
                 <h4 className="ui header">{video.snippet.title}</h4>

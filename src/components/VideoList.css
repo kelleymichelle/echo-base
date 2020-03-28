@@ -1,5 +1,6 @@
 .video-list {
   margin: 0;
+  margin-left: 2em;
   overflow-y: scroll;
   height: 600px;
 }

@@ -21,7 +21,7 @@ class App extends React.Component {
 
     onTermSubmit = term => {
         console.log(term)
-        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&maxResults=5&q=${term}&safeSearch=moderate&key=AIzaSyCrSuHI7SukfTu0Vo_SU1PVUrHDcGyHEPk`)
+        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&maxResults=5&q=${term}&safeSearch=moderate&key=AIzaSyDYcxst_BpKCqQLWlfIDv_-KzTjoK6Iep8`)
           .then(response => response.json())
           .then(result => 
             // console.log(result)
@@ -41,13 +41,15 @@ class App extends React.Component {
     render() {
         return (
             <>
-            <div className="jumbotron">
-                <img alt="rebel logo" src={RebelLogo} width="10%"/>
-                <h1 >Ekko Base</h1>
+            <div className="jumbotron" style={{width: '100%', minWidth: '550px', backgroundColor: 'white'}}>
+                <div style={{width: '13%', marginRight: '1%'}}>
+                    <img alt="rebel logo" src={RebelLogo} style={{width: '100%'}}/>
+                </div>
+                <h1 style={{marginLeft: '0px'}}>Ekko Base</h1>
             </div>
                 <SearchBar className="search" onTermSubmit={this.onTermSubmit} />
                 
-                <div className="d-flex flex-row justify-content-around">
+                <div className="d-flex flex-row flex-wrap justify-content-around">
                     <div className="">
                         <VideoDetail video={this.state.selectedVideo} />
                     </div>
